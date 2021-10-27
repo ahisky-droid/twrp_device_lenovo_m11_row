@@ -24,16 +24,20 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PATH := device/motorola/guamp
+DEVICE_PATH := device/lenovo/m11_row
 
--include device/motorola/sm6115-common/BoardConfigCommon.mk
+-include device/lenovo/sm6115-common/BoardConfigCommon.mk
+#TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab.qcom
 
-# BOARD_KERNEL_SEPARATED_DTBO := true
+#BOARD_HAS_FLIPPED_SCREEN := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
+TW_ROTATION := 90
+#BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
 BOARD_KERNEL_IMAGE_NAME := Image.gz
-# TARGET_KERNEL_SOURCE := kernel/motorola/sm6115-common
-# TARGET_KERNEL_CONFIG := vendor/guamp_defconfig
+#TARGET_KERNEL_SOURCE := kernel/msm-4.19
+#TARGET_KERNEL_CONFIG := LineageOS_m11_row_defconfig
 
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
@@ -59,17 +63,17 @@ BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 4881645568
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # SHRP Flags
-SHRP_DEVICE_CODE := guamp
-SHRP_PATH := device/motorola/guamp
-SHRP_MAINTAINER := Tony
-SHRP_REC_TYPE := SAR
-SHRP_DEVICE_TYPE := A/B
-SHRP_REC := /dev/block/bootdevice/by-name/recovery
-SHRP_EDL_MODE := 1
-SHRP_INTERNAL := /sdcard
-SHRP_EXTERNAL := /external_sd
-SHRP_OTG := /usb_otg
-SHRP_AB := true
-SHRP_NOTCH := true
-SHRP_EXPRESS := true
-SHRP_DARK := true
+#SHRP_DEVICE_CODE := guamp
+#SHRP_PATH := device/motorola/guamp
+#SHRP_MAINTAINER := Tony
+#SHRP_REC_TYPE := SAR
+#SHRP_DEVICE_TYPE := A/B
+#SHRP_REC := /dev/block/bootdevice/by-name/recovery
+#SHRP_EDL_MODE := 1
+#SHRP_INTERNAL := /sdcard
+#SHRP_EXTERNAL := /external_sd
+#SHRP_OTG := /usb_otg
+#SHRP_AB := true
+#SHRP_NOTCH := true
+#SHRP_EXPRESS := true
+#SHRP_DARK := true

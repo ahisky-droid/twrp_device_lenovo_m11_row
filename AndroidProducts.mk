@@ -16,9 +16,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_guamp.mk
+    $(LOCAL_DIR)/omni_m11_row.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_guamp-user \
-    omni_guamp-userdebug \
-    omni_guamp-eng
+    omni_m11_row-user \
+    omni_m11_row-userdebug \
+    omni_m11_row-eng
